@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorDefinitions>
+  <PolyGroups ModuleName="OFDL PS2 Controller" ModuleVersion="1.1 (By OFDL Dev.)">
+    <PolyGroup Name="OFDL PS2 Controller" BlockFamily="Sensor">
+      <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.1" />  
+	  <!--BTN NUMS-->
+      <Parameter Name="btnRaw" Identification="builtin://Identification_Numeric.png" DataType="Single" Direction="Output" />
+	  <!--BTN BOOL-->
+	  <Parameter Name="b_DPAD_Up" Identification="OFDLPS2_Up.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_DPAD_Down" Identification="OFDLPS2_Down.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_DPAD_Left" Identification="OFDLPS2_Left.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_DPAD_Right" Identification="OFDLPS2_Right.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_SS_Start" Identification="OFDLPS2_START.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_SS_Select" Identification="OFDLPS2_SELECT.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_L_L1" Identification="OFDLPS2_L1.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_L_L2" Identification="OFDLPS2_L2.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_L_L3" Identification="OFDLPS2_L3.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_R_R1" Identification="OFDLPS2_R1.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_R_R2" Identification="OFDLPS2_R2.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_R_R3" Identification="OFDLPS2_R3.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_OX_O" Identification="OFDLPS2_O.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_OX_X" Identification="OFDLPS2_X.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_OX_Square" Identification="OFDLPS2_Square.png" DataType="Boolean" Direction="Output" />
+	  <Parameter Name="b_OX_Triangle" Identification="OFDLPS2_Triangle.png" DataType="Boolean" Direction="Output" />
+	  <!--JOY-->
+      <Parameter Name="LeftJoy_X" Identification="OFDLPS2_LX.png" DataType="Single" Direction="Output" />
+      <Parameter Name="LeftJoy_Y" Identification="OFDLPS2_LY.png" DataType="Single" Direction="Output" />
+      <Parameter Name="RightJoy_X" Identification="OFDLPS2_RX.png" DataType="Single" Direction="Output" />
+      <Parameter Name="RightJoy_Y" Identification="OFDLPS2_RY.png" DataType="Single" Direction="Output" />
+	  <Hardware>
+        <NXTPlotColor>#ffffab34</NXTPlotColor>
+        <EV3PlotColor>#ffd46800</EV3PlotColor>
+        <EV3AutoID>94</EV3AutoID>
+        <Direction>Input</Direction>
+        <DefaultPort>1.1</DefaultPort>
+      </Hardware>
+	  <Block>
+        <Mode>CompareALL</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_CompareALL.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="btnRaw" />
+        <ParameterReference Name="b_DPAD_Up" />
+        <ParameterReference Name="b_DPAD_Down" />
+        <ParameterReference Name="b_DPAD_Left" />
+        <ParameterReference Name="b_DPAD_Right" />
+        <ParameterReference Name="b_SS_Start" />
+        <ParameterReference Name="b_SS_Select" />
+        <ParameterReference Name="b_L_L1" />
+        <ParameterReference Name="b_L_L2" />
+        <ParameterReference Name="b_L_L3" />
+        <ParameterReference Name="b_R_R1" />
+        <ParameterReference Name="b_R_R2" />
+        <ParameterReference Name="b_R_R3" />
+        <ParameterReference Name="b_OX_O" />
+        <ParameterReference Name="b_OX_X" />
+        <ParameterReference Name="b_OX_Triangle" />
+        <ParameterReference Name="b_OX_Square" />
+		<ParameterReference Name="LeftJoy_X" />
+        <ParameterReference Name="LeftJoy_Y" />
+        <ParameterReference Name="RightJoy_X" />
+        <ParameterReference Name="RightJoy_Y" />
+		<Flags>PBROnly</Flags>
+		<PaletteInfo Weight="0.5"/>
+      </Block>
+	  <Block>
+        <Mode>ReadStartSel</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_ReadStartSel.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="btnRaw" />
+		<ParameterReference Name="b_SS_Start" />
+        <ParameterReference Name="b_SS_Select" />
+		<Flags>PBROnly</Flags>
+      </Block>
+	  <Block>
+        <Mode>ReadOX</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_ReadOX.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="btnRaw" />
+        <ParameterReference Name="b_OX_O" />
+        <ParameterReference Name="b_OX_X" />
+        <ParameterReference Name="b_OX_Triangle" />
+        <ParameterReference Name="b_OX_Square" />
+		<Flags>PBROnly</Flags>
+      </Block>
+	  <Block>
+        <Mode>ReadLR</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_ReadLR.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="btnRaw" />
+        <ParameterReference Name="b_L_L1" />
+        <ParameterReference Name="b_L_L2" />
+        <ParameterReference Name="b_L_L3" />
+        <ParameterReference Name="b_R_R1" />
+        <ParameterReference Name="b_R_R2" />
+        <ParameterReference Name="b_R_R3" />
+		<Flags>PBROnly</Flags>
+      </Block>
+	  <Block>
+        <Mode>ReadDPAD</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_ReadDPAD.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="btnRaw" />
+        <ParameterReference Name="b_DPAD_Up" />
+        <ParameterReference Name="b_DPAD_Down" />
+        <ParameterReference Name="b_DPAD_Left" />
+        <ParameterReference Name="b_DPAD_Right" />
+		<Flags>PBROnly</Flags>
+      </Block>
+	  <Block>
+        <Mode>ReadJoy</Mode>
+        <Reference Type="VILib" Name="OFDLPS2_ReadJoy.vix" />
+        <ParameterReference Name="Port" />
+		<ParameterReference Name="btnRaw" />
+        <ParameterReference Name="LeftJoy_X" />
+        <ParameterReference Name="LeftJoy_Y" />
+        <ParameterReference Name="RightJoy_X" />
+        <ParameterReference Name="RightJoy_Y" />
+		<Flags>PBROnly</Flags>
+      </Block>
+    </PolyGroup>   
+  </PolyGroups>
+ </EditorDefinitions>

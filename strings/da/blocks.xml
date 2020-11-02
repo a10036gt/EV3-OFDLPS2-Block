@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorStrings>
+  <PolyGroups ModuleName="OFDL PS2 Controller">
+    <PolyGroup Name="OFDL PS2 Controller" DisplayName="PS2 Controller - OFDL Dev.">
+      <Description><![CDATA[<p>Context help for PolyGroup <b>OFDL PS2 Controller</b></p>]]></Description>
+      <Parameter Name="Port" DisplayName="Port"></Parameter>
+      <Parameter Name="btnRaw" DisplayName="Buttons Raw Value"></Parameter>  
+	  <Parameter Name="b_DPAD_Up" DisplayName="D-PAD Up Press?"></Parameter>
+	  <Parameter Name="b_DPAD_Down" DisplayName="D-PAD Down Press?"></Parameter>
+	  <Parameter Name="b_DPAD_Left" DisplayName="D-PAD Left Press?"></Parameter>
+	  <Parameter Name="b_DPAD_Right" DisplayName="D-PAD Right Press?"></Parameter>
+	  <Parameter Name="b_SS_Start" DisplayName="Start Button Press?"></Parameter>
+	  <Parameter Name="b_SS_Select" DisplayName="Select Button Press?"></Parameter>
+	  <Parameter Name="b_L_L1" DisplayName="L1 Button Press?"></Parameter>
+	  <Parameter Name="b_L_L2" DisplayName="L2 Button Press?"></Parameter>
+	  <Parameter Name="b_L_L3" DisplayName="L3 Button Press?"></Parameter>
+	  <Parameter Name="b_R_R1" DisplayName="R1 Button Press?"></Parameter>
+	  <Parameter Name="b_R_R2" DisplayName="R2 Button Press?"></Parameter>
+	  <Parameter Name="b_R_R3" DisplayName="R3 Button Press?"></Parameter>
+	  <Parameter Name="b_OX_O" DisplayName="O Button Press?"></Parameter>
+	  <Parameter Name="b_OX_X" DisplayName="X Button Press?"></Parameter>
+	  <Parameter Name="b_OX_Square" DisplayName="Square Button Press?"></Parameter>
+	  <Parameter Name="b_OX_Triangle" DisplayName="Triangle Button Press?"></Parameter>
+      <Parameter Name="LeftJoy_X" DisplayName="Left Joystick X Axis"></Parameter>
+      <Parameter Name="LeftJoy_Y" DisplayName="Left Joystick Y Axis"></Parameter>
+      <Parameter Name="RightJoy_X" DisplayName="Right Joystick X Axis"></Parameter>
+      <Parameter Name="RightJoy_Y" DisplayName="Right Joystick Y Axis"></Parameter>
+	  
+	  <Block Mode="CompareALL" DisplayName="Read All Values"></Block>
+	  <Block Mode="ReadStartSel" DisplayName="Read Start/Select"></Block>
+	  <Block Mode="ReadOX" DisplayName="Read OX Button"></Block>
+	  <Block Mode="ReadLR" DisplayName="Read L/R Button"></Block>
+	  <Block Mode="ReadDPAD" DisplayName="Read D-PAD"></Block>
+	  <Block Mode="ReadJoy" DisplayName="Read JoyStick"></Block>
+    </PolyGroup>    
+  </PolyGroups>
+</EditorStrings>
